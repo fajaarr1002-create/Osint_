@@ -33,26 +33,78 @@ def cek_usn():
     username = input(f"\n    {h}[{m}>{h}]{k} Enter Username {h}:{k} ").strip()
 
     situs = {
-        "GitHub"       : f"https://github.com/{username}",
-        "GitLab"       : f"https://gitlab.com/{username}",
-        "Twitter/X"    : f"https://twitter.com/{username}",
-        "Instagram"    : f"https://instagram.com/{username}",
-        "TikTok"       : f"https://tiktok.com/@{username}",
-        "Facebook"     : f"https://facebook.com/{username}",
-        "Reddit"       : f"https://reddit.com/user/{username}",
-        "Pinterest"    : f"https://pinterest.com/{username}",
-        "Tumblr"       : f"https://tumblr.com/{username}",
-        "Twitch"       : f"https://twitch.tv/{username}",
-        "YouTube"      : f"https://youtube.com/@{username}",
-        "LinkedIn"     : f"https://linkedin.com/in/{username}",
-        "Telegram"     : f"https://t.me/{username}",
-        "Steam"        : f"https://steamcommunity.com/id/{username}",
-        "Keybase"      : f"https://keybase.io/{username}",
-        "Pastebin"     : f"https://pastebin.com/u/{username}",
-        "Replit"       : f"https://replit.com/@{username}",
-        "HackerNews"   : f"https://news.ycombinator.com/user?id={username}",
-        "ProductHunt"  : f"https://producthunt.com/@{username}",
-        "Gravatar"     : f"https://gravatar.com/{username}",
+    "GitHub"         : f"https://github.com/{username}",
+    "GitLab"         : f"https://gitlab.com/{username}",
+    "Bitbucket"      : f"https://bitbucket.org/{username}",
+    "Codeberg"       : f"https://codeberg.org/{username}",
+
+    "Twitter/X"      : f"https://twitter.com/{username}",
+    "Instagram"      : f"https://instagram.com/{username}",
+    "Threads"        : f"https://threads.net/@{username}",
+    "TikTok"         : f"https://tiktok.com/@{username}",
+    "Facebook"       : f"https://facebook.com/{username}",
+    "Reddit"         : f"https://reddit.com/user/{username}",
+    "Pinterest"      : f"https://pinterest.com/{username}",
+    "Tumblr"         : f"https://{username}.tumblr.com",
+    "Bluesky"        : f"https://bsky.app/profile/{username}",
+    "Mastodon"       : f"https://mastodon.social/@{username}",
+    "VK"             : f"https://vk.com/{username}",
+
+    "Twitch"         : f"https://twitch.tv/{username}",
+    "Kick"           : f"https://kick.com/{username}",
+    "YouTube"        : f"https://youtube.com/@{username}",
+    "SoundCloud"     : f"https://soundcloud.com/{username}",
+    "Bandcamp"       : f"https://{username}.bandcamp.com",
+    "Spotify"        : f"https://open.spotify.com/user/{username}",
+    "LastFM"         : f"https://last.fm/user/{username}",
+
+    "LinkedIn"       : f"https://linkedin.com/in/{username}",
+    "Medium"         : f"https://medium.com/@{username}",
+    "DevTo"          : f"https://dev.to/{username}",
+    "Hashnode"       : f"https://hashnode.com/@{username}",
+    "Substack"       : f"https://{username}.substack.com",
+
+    "Telegram"       : f"https://t.me/{username}",
+    "Discord"        : f"https://discord.com/users/{username}",
+
+    "Steam"          : f"https://steamcommunity.com/id/{username}",
+    "Roblox"         : f"https://www.roblox.com/user.aspx?username={username}",
+    "ChessCom"       : f"https://www.chess.com/member/{username}",
+    "Lichess"        : f"https://lichess.org/@/{username}",
+
+    "Keybase"        : f"https://keybase.io/{username}",
+    "Pastebin"       : f"https://pastebin.com/u/{username}",
+    "Replit"         : f"https://replit.com/@{username}",
+    "DockerHub"      : f"https://hub.docker.com/u/{username}",
+    "NPM"            : f"https://www.npmjs.com/~{username}",
+    "PyPI"           : f"https://pypi.org/user/{username}",
+
+    "HackerNews"     : f"https://news.ycombinator.com/user?id={username}",
+    "ProductHunt"    : f"https://www.producthunt.com/@{username}",
+    "Kaggle"         : f"https://www.kaggle.com/{username}",
+    "ResearchGate"   : f"https://www.researchgate.net/profile/{username}",
+
+    "Gravatar"       : f"https://gravatar.com/{username}",
+    "Flickr"         : f"https://flickr.com/people/{username}",
+    "Imgur"          : f"https://imgur.com/user/{username}",
+    "DeviantArt"     : f"https://www.deviantart.com/{username}",
+    "ArtStation"     : f"https://www.artstation.com/{username}",
+    "Behance"        : f"https://www.behance.net/{username}",
+    "Dribbble"       : f"https://dribbble.com/{username}",
+
+    "Patreon"        : f"https://patreon.com/{username}",
+    "KoFi"           : f"https://ko-fi.com/{username}",
+    "BuyMeACoffee"   : f"https://buymeacoffee.com/{username}",
+    "PayPal"         : f"https://paypal.me/{username}",
+
+    "Goodreads"      : f"https://www.goodreads.com/{username}",
+    "Letterboxd"     : f"https://letterboxd.com/{username}",
+    "Wattpad"        : f"https://www.wattpad.com/user/{username}",
+    "Quora"          : f"https://www.quora.com/profile/{username}",
+    "MyAnimeList"    : f"https://myanimelist.net/profile/{username}",
+    "Strava"         : f"https://www.strava.com/athletes/{username}",
+    "OpenSea"        : f"https://opensea.io/{username}",
+      
     }
 
     print(f"\n    {k}Searching username {h}\"{username}\"{k} on {len(situs)} sites...\n")
@@ -168,12 +220,14 @@ def main():
     while True:
         os.system("clear")
         print(f"""{m}
-________         .__        __ __________.__        
-\_____  \   _____|__| _____/  |\______   \  |  __ __  ______
- /   |   \ /  ___/  |/    \   __\     ___/  | |  |  \/  ___/
-/    |    \\\___ \|  |   |  \  | |    |   |  |_|  |  /\___ \ 
-\_______  /____  >__|___|  /__| |____|   |____/____//____  >
-        \/     \/        \/                              \/ 
+   ____   _____ _____ _   _ _______   _         _____  
+  / __ \ / ____|_   _| \ | |__   __| | |  /\   |  __ \ 
+ | |  | | (___   | | |  \| |  | |    | | /  \  | |__) |
+ | |  | |\___ \  | | | . ` |  | |_   | |/ /\ \ |  _  / 
+ | |__| |____) |_| |_| |\  |  | | |__| / ____ \| | \ \ 
+  \____/|_____/|_____|_| \_|  |_|\____/_/    \_\_|  \_\
+                                                       
+                                                       
 
     {h} 🜲 {m}:{k} Pjar
     {h} ☸ {m}:{k} https://github.com/fajaarr1002-create
@@ -185,7 +239,7 @@ ________         .__        __ __________.__
     {h}[{m}2{h}]{k} Check IP Address Information
     {h}[{m}3{h}]{k} Check Username Information
     {h}[{m}4{h}]{k} Check My IP Address
-    {h}[{m}5{h}]{k} Follow Byexe WhatsApp Channel
+    {h}[{m}5{h}]{k} Follow Pajar WhatsApp Channel
     {h}[{m}0{h}]{k} Exit
 """)
         pilihan = input(f"    {h}[{m}>{h}]{k} Enter Choice {h}:{k} ").strip()
